@@ -39,8 +39,9 @@
 		     var foo = null;
 		     var goR = true;
 		     var n =0;
+		     var travel=500;
 		     function doMove() {
-		        if(n>500){
+		        if((n%(2*1000))>travel){
 				foo.style.left = parseInt(foo.style.left)-2+'px';
 			}
 			foo.style.left = parseInt(foo.style.left)+1+'px';	
