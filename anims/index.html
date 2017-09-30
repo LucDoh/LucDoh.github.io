@@ -1,59 +1,61 @@
 <<!DOCTYPE html>
-<html>
-	<head>
-	  <style type="text/css">
-	    #fooObject {
-	  /* simple box */
-	  position:absolute;
-	  left:0px;
-	  top:8em;
-	  width:5em;
-	  line-height:3em;
-	  background:#99ccff;
-	  border:1px solid #003366;
-	  white-space:nowrap;
-	  padding:0.5em;
-	  }
-	  </style>
-	  <title>Luc the Doh</title>
-	  <!-- link to main stylesheet -->
-	  <link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-	  <nav>
-    	    <ul>
-              <li><a href="/">Home</a></li>
-	      <li><a href="/about">About</a></li>
-              <li><a href="/cv">CV</a></li>
-              <li><a href="/cv">Learnings</a></li>
-              <li><a href="/blog">Blog</a></li>
-    		</ul>
-	  </nav>
-	  <div class="container">
-    	    <div class="blurb">
-
-	      <!--Inspired by Schillmania! Javascript Animation example -->
-	      <script language="Javascript">
-		
-
-		var foo = null;
-		
-		function doMove() {
-	
-		if(parseInt(foo.style.left) >= 500){
-  foo.style.left = parseInt(foo.style.left)-1+'px';
-  } 
-  else {
-  foo.style.left = parseInt(foo.style.left)+1+'px';
-  }
-  setTimeout(doMove,20); // call doMove in 20msec
+	   <html>
+	     <head>
+	       <style type="text/css">
+		 #fooObject {
+		 /* simple box */
+		 position:absolute;
+		 left:0px;
+		 top:8em;
+		 width:5em;
+		 line-height:3em;
+		 background:#99ccff;
+		 border:1px solid #003366;
+		 white-space:nowrap;
+		 padding:0.5em;
+		 }
+	       </style>
+	       <title>Luc the Doh</title>
+	       <!-- link to main stylesheet -->
+	       <link rel="stylesheet" type="text/css" href="/css/main.css">
+	     </head>
+	     <body>
+	       <nav>
+    		 <ul>
+		   <li><a href="/">Home</a></li>
+		   <li><a href="/about">About</a></li>
+		   <li><a href="/cv">CV</a></li>
+		   <li><a href="/cv">Learnings</a></li>
+		   <li><a href="/blog">Blog</a></li>
+    		 </ul>
+	       </nav>
+	       <div class="container">
+    		 <div class="blurb">
+		   
+		   <!--Inspired by Schillmania! Javascript Animation example -->
+		   <script language="Javascript">
+		     
+		     
+		     var foo = null;
+		     var goR = true;
+		     function doMove() {
+		     if (parseInt(foo.style.left) >= 500) goR = false;
+  		     if (parseInt(foo.style.left) =< 0) goR = true;
+		     if(parseInt(goR === true){
+			foo.style.left = parseInt(foo.style.left)-1+'px';
   
-		}
-		
-		function init() {
-		foo = document.getElementById('fooObject'); // get the "foo" object
-		foo.style.left = '0px'; // set its initial position to 0px
-		doMove(); // start animating
+			} 
+			else {
+				foo.style.left = parseInt(foo.style.left)+1+'px';
+			}
+			setTimeout(doMove,20); // call doMove in 20msec
+  
+		  }
+  
+	function init() {
+	foo =	document.getElementById('fooObject'); // get the "foo" object
+	foo.style.left = '0px'; // set its initial position to 0px
+	doMove(); // start animating
 		}
 		
 		
