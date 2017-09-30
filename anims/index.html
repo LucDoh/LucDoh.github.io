@@ -39,12 +39,15 @@
 		var foo = null;
 		
 		function doMove() {
-		foo.style.left = parseInt(foo.style.left)+1+'px';
-		if(parseInt(foo.style.left) === 500){
-		foo.style.left = parseInt(foo.style.left)-1+'px';
-		}
-		setTimeout(doMove,20); // call doMove in 20msec
-		
+	
+		if(parseInt(foo.style.left) >= 500){
+  foo.style.left = parseInt(foo.style.left)-1+'px';
+  } 
+  else {
+  foo.style.left = parseInt(foo.style.left)+1+'px';
+  }
+  setTimeout(doMove,20); // call doMove in 20msec
+  
 		}
 		
 		function init() {
