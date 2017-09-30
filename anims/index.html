@@ -31,17 +31,24 @@
 	  </nav>
 	  <div class="container">
     	    <div class="blurb">
+
+	      <!--Inspired by Schillmania! Javascript Animation example -->
 	      <script language="Javascript">
 		
-		var foo = null; // object
+
+		var foo = null;
 		
 		function doMove() {
 		foo.style.left = parseInt(foo.style.left)+1+'px';
+		if(parseInt(foo.style.left) === 500){
+		foo.style.left = parseInt(foo.style.left)-1+'px';
+		}
 		setTimeout(doMove,20); // call doMove in 20msec
+		
 		}
 		
 		function init() {
-		      foo = document.getElementById('fooObject'); // get the "foo" object
+		foo = document.getElementById('fooObject'); // get the "foo" object
 		foo.style.left = '0px'; // set its initial position to 0px
 		doMove(); // start animating
 		}
