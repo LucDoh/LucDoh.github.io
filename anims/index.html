@@ -39,7 +39,7 @@
 		     var foo = null;
 		     var goR = true;
 		     function doMove() {
-		        if(foo.style.left > 500){
+		        if(partseInt(foo.style.left) > 500){
 				foo.style.left = parseInt(foo.style.left)-2+'px';
 			}
 			foo.style.left = parseInt(foo.style.left)+1+'px';	
