@@ -38,12 +38,13 @@
 		     
 		     var foo = null;
 		     var goR = true;
+		     var n =0;
 		     function doMove() {
-		        if(partseInt(foo.style.left) == (500+'px')){
-				foo.style.left = parseInt(foo.style.left)-200+'px';
+		        if(n>500){
+				foo.style.left = parseInt(foo.style.left)-2+'px';
 			}
 			foo.style.left = parseInt(foo.style.left)+1+'px';	
-
+			n++;
 			setTimeout(doMove,20); // call doMove in 20msec
   
 			}
