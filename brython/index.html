@@ -1,0 +1,30 @@
+
+<html>
+<head>
+<script src="../BrythonS/brython.js"></script>
+<script type="text/javascript" src="../BrythonS/brython_stdlib.js"></script>
+</head>
+<body onload="brython()">
+<script type="text/python">
+from browser import document, alert
+s = "Time since UNIX Equinox: " + t
+
+document <= "Hello world !"
+document <= s
+
+def echo(ev):
+    alert(document["zone"].value)
+document['mybutton'].bind('click',echo)
+</script>
+<input id="zone"><button id="mybutton">click !</button>
+    <p id="demo">
+    </p>
+    
+     <script>
+        var d = new Date();
+        var n = d.getTime();
+        var s = "Time since UNIX Equinox" + n;
+        document.getElementById("demo").innerHTML = s;
+    </script>
+</body>  
+</html>
