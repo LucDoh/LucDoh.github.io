@@ -3,6 +3,11 @@ body {
     width: 70%;*/
     body {margin:0;padding:0}
 }
+/* "auto" makes the left and right margins center the wrapper */
+#wrap { 
+	width: 900px; 
+	margin: 0 auto; 
+}
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
