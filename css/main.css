@@ -1,7 +1,7 @@
 body {
-/*    margin: 60px auto;
-    width: 70%;*/
-    body {margin:0;padding:0}
+    margin: 100px auto;
+    width: 70%;
+   /* body {margin:0;padding:0}*/
 }
 /* "auto" makes the left and right margins center the wrapper */
 #wrap { 
