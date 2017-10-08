@@ -26,6 +26,18 @@
 		</nav>
 		<div class="container">
     		<div class="blurb">
+			<!--
+		<div data-role="main" class="ui-content">
+    			<div data-role="collapsible">
+      			<h1>Click me - I'm collapsible!</h1>
+     			<p>I'm the expanded content.</p>
+			 <p>I'm the 2nd expanded content.</p>
+			 <p>I'm the 3rd expanded content.</p>
+
+
+    			</div>
+ 		</div>
+		-->
 		<embed src="../files/Luc_CV_Late2017.pdf" width="800px" height="2100px" />
 
 		<!--
