@@ -4,9 +4,9 @@ body {
    /* body {margin:0;padding:0}*/
 }
 /* "auto" makes the left and right margins center the wrapper */
-#wrap { 
-	width: 900px; 
-	margin: 0 auto; 
+#wrap {
+	width: 900px;
+	margin: 0 auto;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -39,11 +39,22 @@ footer {
     font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
+ul.posts {
+    margin: 20px auto 40px;
     font-size: 1.5em;
 }
 
 ul.posts li {
     list-style: none;
+}
+li {
+    list-style-type: none;
+}
+
+ figure {
+  display: block;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-left: 40px;
+  margin-right: 40px;
 }

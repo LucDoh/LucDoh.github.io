@@ -4,6 +4,9 @@
     <title>Luc the Doh</title>
     <!-- link to main stylesheet -->
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-dark-grey.css">
+
     <!-- Testing expandable -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -12,22 +15,30 @@
     <!-- End expandable-->
   </head>
   <body>
-    <div id="wrap">
       <!-- WEBSITE GOES HERE -->
+      <ul class="w3-ul w3-border-top">
+     <center>
       <nav>
-    	<ul>
-          <li><a href="/">Home</a></li>
-	  <li><a href="/about">About</a></li>
-          <li><a href="/cv">CV</a></li>
-          <li><a href="/cv">Learnings</a></li>
-          <li><a href="/blog">Blog</a></li>
-    	</ul>
+          <li class="w3-theme-d3">
+              <a href="/">Home</a>
+              &nbsp
+              <a href="/DataScienceTutorial">DS-Tutorial</a>
+              &nbsp
+             <a href="/cv"> Old CV</a>
+             &nbsp
+             <a href="/anims">Animations/Counters</a>
+             &nbsp
+             <a href="/research">Research</a>
+             &nbsp
+     </li>
+
       </nav>
+      <div id="wrap">
       <div class="container">
     	<div class="blurb">
 	  <!--Start collapse div, h1-h6 will be expandable -->
 	  <div data-role="main" class="ui-content">
-	    
+
     	    <div data-role="collapsible">
               <h1>Using a TEG generator to convert Excess Heat into Electricity</h1>
 	      <h3> Question: </h3>
@@ -36,7 +47,7 @@
 		b) What specifications should I look out for in the TEG I get: Max Temp, Max Voltage output, etc? </p>
 	      <h3> Answer: </h3>
 	      <p > a) The output of different TEG's vary widely, so you will definitely need some type of voltage regulator to
-		ensure your final output is at the right voltage. To get an idea, I'd look into other peoples systems, such as 
+		ensure your final output is at the right voltage. To get an idea, I'd look into other peoples systems, such as
 		<a href="https://www.youtube.com/watch?v=xaT2hqHgLdY">DIY Perks' setup</a>.
 		He uses this nifty thing like this to charge a phone (or other 5V USB device)
 		[1]:</p>
@@ -52,22 +63,22 @@
 		So you'd need an inverter (AC-DC).<br>
 		- You need your TEG system to output more power, through a much higher voltage (~20V) and current
 		(~3A) since most computers require at least that.<br><br>
-		b) The two specs I would be most concerned with are Max Temp and Max Power.<br> 
+		b) The two specs I would be most concerned with are Max Temp and Max Power.<br>
 		I would think the max temp is fairly strict, so if the hot side stays above the limit for long, the TEG might be toast. It seems
 		that the way to prevent this is by making sure there is a way to dissipate the heat once it is moved to the coldside (perhaps
 		with a thermal mass like water, the ground, etc) AND not put it too close to the heat source. You could have a copper tube draw the
 		heat towards it, for example. <br>
 		You also want to make sure you're getting enough power by using powerful enough TEGs and/or enough of them to actually get the power
 		you need.<br>
-		
-	      </p> 
+
+	      </p>
 	      <p> If I were making this cool system, I would probably start small. Get a couple TEG Plates, a cheap voltage regulator (?)
 		and some type of heatsink.</p>
 	      <!-- <p > An aside: Thermal energy released from wood is about: 1.6 - 5 kWh/kg depending on moisture content (1).
 		   </p>-->
-              
+
               <p > 1. http://www.ebay.com/itm/331591953526?rmvSB=true <br></p>
-	      <!--2. https://physics.stackexchange.com/questions/194367/how-big-is-a-1kw-fire-->  
+	      <!--2. https://physics.stackexchange.com/questions/194367/how-big-is-a-1kw-fire-->
 	      <embed src="../img/TEG_diagram.jpg" width="200" height="260"/>
 	    </div><!-- close collapsible-->
 	    <div data-role="collapsible">
@@ -77,20 +88,27 @@
 	  </div><!-- close class ui-content-->
     	</div><!-- /.blurb -->
       </div><!-- /.container -->
-      
+
       <!-- begin wwww.htmlcommentbox.com -->
       <p><br></p>
       <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
       <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
       <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24aPrLdGNzLzPj6mk.V9nl30"+"&opts=16862&num=10&ts=1506665294891");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
       <!-- end www.htmlcommentbox.com -->
-      
+
       <footer>
-    	<ul>
-          <li><a href="mailto:nobody@gmail.com">email</a></li>
-          <li><a href="https://github.com/lucdoh">github.com/lucdoh</a></li>
-	</ul>
-      </footer>
+          <li class="w3-theme-l3">
+              <figure>
+              <img style="display: inline; margin: 0 11px;" title="snailmail_logo" src="../img/Clipart_mail.png" alt ="" width="55.207" height="50" />
+              <img style="display: inline; margin: 0 18px;" title="github_logo" src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" alt ="" width="50" height="50" />
+              <figcaption>
+                  <a href="mailto:ljdhauth@terpmail.umd.edu">Email</a>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  <a href="https://github.com/lucdoh">Github</a>
+              </figcaption>
+          </figure>
+            </li>
+            </footer>
+        </center>
+         </ul>
     </div>
   </body>
 </html>

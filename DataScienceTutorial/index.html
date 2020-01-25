@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
+    <body>
+    <title>clHousingAnalysis_DSTutorial</title>
 
-<title>clHousingAnalysis_DSTutorial</title>
-
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-dark-grey.css">
+     </head>
+     <ul class="w3-ul w3-border-top">
+    <center>
+     <body>
+       <nav>
+           <a href="/">Home</a>
+           &nbsp
+           <a href="/DataScienceTutorial">DS-Tutorial</a>
+           &nbsp
+          <a href="/cv"> Old CV</a>
+          &nbsp
+          <a href="/anims">Animations/Counters</a>
+          &nbsp
+      </li>
+  </center>
+</body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -142,7 +161,8 @@ select {
 button,
 html input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"] {<head><meta charset="utf-8" />
+
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -9129,15 +9149,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12539,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13018,7 +13038,7 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -13072,14 +13092,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13162,7 +13182,7 @@ Part 1) We'll start by  using <em>Beautiful Soup</em> to make a first pass and s
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">folium</span> 
+<span class="kn">import</span> <span class="nn">folium</span>
 <span class="kn">from</span> <span class="nn">folium.plugins</span> <span class="k">import</span> <span class="n">HeatMap</span>
 </pre></div>
 
@@ -13207,7 +13227,7 @@ Part 1) We'll start by  using <em>Beautiful Soup</em> to make a first pass and s
 <span class="c1"># Using a BeautifulSoup object, we extract in our first pass the relevant information on the posting that can be obtained </span>
 <span class="c1"># before visiting the link.</span>
 <span class="k">def</span> <span class="nf">getHouses</span><span class="p">(</span><span class="n">soup</span><span class="p">):</span>
-    <span class="n">sum_Unlabeled</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="n">sum_Unlabeled</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">r_matrix</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="s2">&quot;result-row&quot;</span><span class="p">):</span>
         <span class="c1">#Try catch Nonetype object error (can&#39;t call .text)</span>
@@ -13226,11 +13246,11 @@ Part 1) We'll start by  using <em>Beautiful Soup</em> to make a first pass and s
                 <span class="k">if</span><span class="p">(</span><span class="n">brSqft</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;br&#39;</span><span class="p">)):</span>
                     <span class="n">brSqft</span> <span class="o">=</span> <span class="n">brSqft</span> <span class="o">+</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">)]</span>
                 <span class="k">else</span><span class="p">:</span>
-                    <span class="n">brSqft</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">)]</span> <span class="o">+</span> <span class="n">brSqft</span> 
-                    
+                    <span class="n">brSqft</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">)]</span> <span class="o">+</span> <span class="n">brSqft</span>
+
             <span class="n">r_matrix</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">pID</span><span class="p">,</span> <span class="n">rtitle_txt</span><span class="p">,</span> <span class="n">price</span><span class="p">]</span> <span class="o">+</span> <span class="n">brSqft</span> <span class="o">+</span> <span class="p">[</span><span class="n">href</span><span class="p">])</span>
             <span class="c1">#print(brSqft)</span>
-        <span class="k">except</span><span class="p">:</span> 
+        <span class="k">except</span><span class="p">:</span>
             <span class="n">sum_Unlabeled</span><span class="o">+=</span><span class="mi">1</span> <span class="c1">#Catch value error, some don&#39;t have text</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">r_matrix</span><span class="p">)</span>
     <span class="c1">#print(df.shape)</span>
@@ -13899,13 +13919,13 @@ Part 1) We'll start by  using <em>Beautiful Soup</em> to make a first pass and s
 
     <span class="n">df_current</span> <span class="o">=</span> <span class="n">getHouses</span><span class="p">(</span><span class="n">makeSoup</span><span class="p">(</span><span class="n">link</span><span class="p">))</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_current</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-     
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">size</span><span class="p">)</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
 <span class="c1"># We have 2034 when running over 3 pages of cl</span>
 <span class="c1">#print(df) # 339 rows x 6 cols</span>
-    
 
-        
+
+
 </pre></div>
 
     </div>
@@ -13949,130 +13969,130 @@ Number of ^bad^ rows: 0
 Number of ^bad^ rows: 0
 12348
                0                                                  1      2  \
-0     6768139045  Hardwood floors or wall-to-carpet, Onsite mana...  $1127   
-1     6762443303             WHY WAIT !!!!APPLY FOR FREE TODAY!!!!!  $1540   
-2     6769618829  Stylish kitchens and baths, Wall-to-wall carpe...  $1745   
-3     6769498986          Cable Ready, Fitness Programs, Playground  $1375   
-4     6750320244  Stainless Steel Appliances, Granite-Like Count...  $1300   
-5     6767836359                 &#34; Save $1000 on all One Bedrooms &#34;  $1256   
-6     6769154013  OPEN FLOOR PLAN,IMPRESSIVE VIEWS,WASHER AND DR...  $1215   
-7     6768139078  Hardwood floors or wall-to-wall carpet, Onsite...  $1227   
-8     6759615365            COME SPEND THE HOLIDAYS AT THE VILLAS!!  $1129   
-9     6770049093  CHEAPEST PRICE EVER SAVE MONEY FOR THE HOLIDAY...  $1311   
-10    6770992351          Teachers Discount... Discounted Rent!!!!!  $1279   
-11    6763083376                                  1st Month Free!!!  $1515   
-12    6764858964  Controlled access intercom, Air Conditioning, ...  $1348   
-13    6771300060  Holiday rental discount starting at $1338! Lim...  $1338   
-14    6750388690           What Are You Waiting For? Call Me Now!!!  $1141   
-15    6768140518  Off-street parking, Onsite maintenance, Onsite...  $1541   
-16    6767892117  WALL-TO-WALL CARPETING, ELEVATOR ACCESS TO ALL...  $1789   
-17    6756290916                     CALL! CALL! CALL! CALL TODAY!!  $1385   
-18    6769547838  Metro bus at your front door, Controlled acces...  $1504   
-19    6767844474                      &#34; One Month Free &#34; ask me How  $1611   
-20    6755007043                   Condo for Rent (Takoma Park, MD)  $1500   
-21    6771232333                                 MOVE IN SPECIAL !!  $1195   
-22    6767951829                         LAST ONE AT THIS PRICE!!!!  $1089   
-23    6757143632                       INSANE SPECIALS! CALL TODAY!  $1695   
-24    6759743122      Dog Park, Granite Countertops, Walk-In Closet  $1540   
-25    6763809881  SPACIOUS BEDROOM FOR THE ENTIRE FAMILY! GET TH...  $1491   
-26    6753502686        Home Sweet Home at Franklin Park Apartments  $1455   
-27    6764479229  Convenient laundry facilities, Ceramic-tile ba...  $1127   
-28    6756435430     Walk-In Closets, Tub/Shower, Controlled Access  $1559   
-29    6771327207  Holiday rent specials starting at $1412. Limit...  $1412   
-...          ...                                                ...    ...   
-2028  6729755349  One Bedroom !! One Left With October Rent Free !!  $1289   
-2029  6739130911                                 Apartment Specials  $1077   
-2030  6723976868                                  Two Bedroom Condo  $1300   
-2031  6738931521  Reserved parking available, Pet friendly, Walk...  $1648   
-2032  6738921152  Reserved Parking Available, Clothes Care Cente...  $1404   
-2033  6738913993  ½ mile to 495, 24 hour emergency maintenance, ...  $1912   
-2034  6738911997  Steps to two bus routes, Newly renovated fitne...  $1331   
-2035  6738908686  Newly renovated fitness center, Dishwasher, Wa...  $1648   
-2036  6713827871  CENTRAL AIR CONDITIONING, LAUNDRY CENTERS IN E...  $1126   
-2037  6738476922  Steps to two bus routes, Planked flooring (in ...  $1404   
-2038  6738474782  24 hour emergency maintenance, Spacious rooms,...  $1974   
-2039  6738472589  Reserved parking available, Large walk-in clos...  $1648   
-2040  6738471627  24 hour emergency maintenance, Pet friendly, S...  $1404   
-2041  6714772855                  Falling Leaves... Falling Prices.  $1126   
-2042  6738319507  Amazing November Specials!! Get Moved In Befor...  $1575   
-2043  6713730730           Walk-In Closets, Playground, Cable Ready  $1054   
-2044  6738095818  Receive $43 Off Monthly If You Sign A 14-Month...  $1332   
-2045  6713829093  Falling Leaves ... Falling Prices! They&#39;re Bot...  $1126   
-2046  6714774565           What Are You Waiting For? Call Me Now!!!  $1126   
-2047  6713834082                Only A Few Units Left! Move In Now!  $1126   
-2048  6737461859  Two and Dens Available For Move In This Month ...  $1544   
-2049  6713830583           What Are You Waiting For? Call Me Now!!!  $1126   
-2050  6737326000  Two Bedroom With Washer and Dryer in Unit! Ama...  $1539   
-2051  6737314100  Amazing November Specials !! Get Moved For The...  $1482   
-2052  6713825528    WELCOME  HOME !!!!! BIENVENIDO A CASA!!!!!!!!!!  $1126   
-2053  6713832636  LARGE, UPDATED EAT-IN KITCHEN, SPACIOUS CLOSET...  $1126   
-2054  6715045733    WELCOME  HOME !!!!! BIENVENIDO A CASA!!!!!!!!!!  $1126   
-2055  6736696612  Spacious One Bedroom With Great Special! Washe...  $1262   
-2056  6736344161  Two Bedrooms For Only $1406 A Month !!!! Amazi...  $1406   
-2057  6736341443  This Special Will Drop Your Monthly Rent By $1...  $1503   
+0     6768139045  Hardwood floors or wall-to-carpet, Onsite mana...  $1127
+1     6762443303             WHY WAIT !!!!APPLY FOR FREE TODAY!!!!!  $1540
+2     6769618829  Stylish kitchens and baths, Wall-to-wall carpe...  $1745
+3     6769498986          Cable Ready, Fitness Programs, Playground  $1375
+4     6750320244  Stainless Steel Appliances, Granite-Like Count...  $1300
+5     6767836359                 &#34; Save $1000 on all One Bedrooms &#34;  $1256
+6     6769154013  OPEN FLOOR PLAN,IMPRESSIVE VIEWS,WASHER AND DR...  $1215
+7     6768139078  Hardwood floors or wall-to-wall carpet, Onsite...  $1227
+8     6759615365            COME SPEND THE HOLIDAYS AT THE VILLAS!!  $1129
+9     6770049093  CHEAPEST PRICE EVER SAVE MONEY FOR THE HOLIDAY...  $1311
+10    6770992351          Teachers Discount... Discounted Rent!!!!!  $1279
+11    6763083376                                  1st Month Free!!!  $1515
+12    6764858964  Controlled access intercom, Air Conditioning, ...  $1348
+13    6771300060  Holiday rental discount starting at $1338! Lim...  $1338
+14    6750388690           What Are You Waiting For? Call Me Now!!!  $1141
+15    6768140518  Off-street parking, Onsite maintenance, Onsite...  $1541
+16    6767892117  WALL-TO-WALL CARPETING, ELEVATOR ACCESS TO ALL...  $1789
+17    6756290916                     CALL! CALL! CALL! CALL TODAY!!  $1385
+18    6769547838  Metro bus at your front door, Controlled acces...  $1504
+19    6767844474                      &#34; One Month Free &#34; ask me How  $1611
+20    6755007043                   Condo for Rent (Takoma Park, MD)  $1500
+21    6771232333                                 MOVE IN SPECIAL !!  $1195
+22    6767951829                         LAST ONE AT THIS PRICE!!!!  $1089
+23    6757143632                       INSANE SPECIALS! CALL TODAY!  $1695
+24    6759743122      Dog Park, Granite Countertops, Walk-In Closet  $1540
+25    6763809881  SPACIOUS BEDROOM FOR THE ENTIRE FAMILY! GET TH...  $1491
+26    6753502686        Home Sweet Home at Franklin Park Apartments  $1455
+27    6764479229  Convenient laundry facilities, Ceramic-tile ba...  $1127
+28    6756435430     Walk-In Closets, Tub/Shower, Controlled Access  $1559
+29    6771327207  Holiday rent specials starting at $1412. Limit...  $1412
+...          ...                                                ...    ...
+2028  6729755349  One Bedroom !! One Left With October Rent Free !!  $1289
+2029  6739130911                                 Apartment Specials  $1077
+2030  6723976868                                  Two Bedroom Condo  $1300
+2031  6738931521  Reserved parking available, Pet friendly, Walk...  $1648
+2032  6738921152  Reserved Parking Available, Clothes Care Cente...  $1404
+2033  6738913993  ½ mile to 495, 24 hour emergency maintenance, ...  $1912
+2034  6738911997  Steps to two bus routes, Newly renovated fitne...  $1331
+2035  6738908686  Newly renovated fitness center, Dishwasher, Wa...  $1648
+2036  6713827871  CENTRAL AIR CONDITIONING, LAUNDRY CENTERS IN E...  $1126
+2037  6738476922  Steps to two bus routes, Planked flooring (in ...  $1404
+2038  6738474782  24 hour emergency maintenance, Spacious rooms,...  $1974
+2039  6738472589  Reserved parking available, Large walk-in clos...  $1648
+2040  6738471627  24 hour emergency maintenance, Pet friendly, S...  $1404
+2041  6714772855                  Falling Leaves... Falling Prices.  $1126
+2042  6738319507  Amazing November Specials!! Get Moved In Befor...  $1575
+2043  6713730730           Walk-In Closets, Playground, Cable Ready  $1054
+2044  6738095818  Receive $43 Off Monthly If You Sign A 14-Month...  $1332
+2045  6713829093  Falling Leaves ... Falling Prices! They&#39;re Bot...  $1126
+2046  6714774565           What Are You Waiting For? Call Me Now!!!  $1126
+2047  6713834082                Only A Few Units Left! Move In Now!  $1126
+2048  6737461859  Two and Dens Available For Move In This Month ...  $1544
+2049  6713830583           What Are You Waiting For? Call Me Now!!!  $1126
+2050  6737326000  Two Bedroom With Washer and Dryer in Unit! Ama...  $1539
+2051  6737314100  Amazing November Specials !! Get Moved For The...  $1482
+2052  6713825528    WELCOME  HOME !!!!! BIENVENIDO A CASA!!!!!!!!!!  $1126
+2053  6713832636  LARGE, UPDATED EAT-IN KITCHEN, SPACIOUS CLOSET...  $1126
+2054  6715045733    WELCOME  HOME !!!!! BIENVENIDO A CASA!!!!!!!!!!  $1126
+2055  6736696612  Spacious One Bedroom With Great Special! Washe...  $1262
+2056  6736344161  Two Bedrooms For Only $1406 A Month !!!! Amazi...  $1406
+2057  6736341443  This Special Will Drop Your Monthly Rent By $1...  $1503
 
-        3        4                                                  5  
-0     1br   685ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-1     1br   860ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-2     2br   825ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-3     3br   928ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-4     2br   636ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-5     1br   777ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-6     1br   593ft2  https://washingtondc.craigslist.org/doc/apa/d/...  
-7     1br   685ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-8     1br   790ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-9     1br   800ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-10    1br   668ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-11    2br   945ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-12    2br   742ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-13    1br   800ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-14    1br   787ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-15    2br   875ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-16    2br  1000ft2  https://washingtondc.craigslist.org/doc/apa/d/...  
-17    1br   800ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-18    3br  1035ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-19    3br  1177ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-20    1br   478ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-21    1br   538ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-22    1br   593ft2  https://washingtondc.craigslist.org/doc/apa/d/...  
-23    2br  1110ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-24    1br   860ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-25    2br  1009ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-26    2br   913ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-27    1br   685ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-28    3br  1045ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-29    1br   860ft2  https://washingtondc.craigslist.org/mld/apa/d/...  
-...   ...      ...                                                ...  
-2028  1br   713ft2  https://baltimore.craigslist.org/apa/d/one-bed...  
-2029  1br   700ft2  https://smd.craigslist.org/apa/d/apartment-spe...  
-2030  2br  1000ft2  https://annapolis.craigslist.org/apa/d/two-bed...  
-2031  2br   950ft2  https://baltimore.craigslist.org/apa/d/reserve...  
-2032  1br   850ft2  https://baltimore.craigslist.org/apa/d/reserve...  
-2033  3br  1150ft2  https://baltimore.craigslist.org/apa/d/mile-to...  
-2034  1br   850ft2  https://baltimore.craigslist.org/apa/d/steps-t...  
-2035  2br   950ft2  https://baltimore.craigslist.org/apa/d/newly-r...  
-2036  1br   787ft2  https://annapolis.craigslist.org/apa/d/central...  
-2037  1br   850ft2  https://baltimore.craigslist.org/apa/d/steps-t...  
-2038  3br  1150ft2  https://baltimore.craigslist.org/apa/d/24-hour...  
-2039  2br   950ft2  https://baltimore.craigslist.org/apa/d/reserve...  
-2040  1br   850ft2  https://baltimore.craigslist.org/apa/d/24-hour...  
-2041  1br   787ft2  https://annapolis.craigslist.org/apa/d/falling...  
-2042  2br   970ft2  https://baltimore.craigslist.org/apa/d/amazing...  
-2043  1br   727ft2  https://baltimore.craigslist.org/apa/d/walk-in...  
-2044  1br   780ft2  https://baltimore.craigslist.org/apa/d/receive...  
-2045  1br   787ft2  https://annapolis.craigslist.org/apa/d/falling...  
-2046  1br   787ft2  https://annapolis.craigslist.org/apa/d/what-ar...  
-2047  1br   787ft2  https://annapolis.craigslist.org/apa/d/only-fe...  
-2048  2br   967ft2  https://baltimore.craigslist.org/apa/d/two-and...  
-2049  1br   787ft2  https://annapolis.craigslist.org/apa/d/what-ar...  
-2050  2br   833ft2  https://baltimore.craigslist.org/apa/d/two-bed...  
-2051  2br   738ft2  https://baltimore.craigslist.org/apa/d/amazing...  
-2052  1br   787ft2  https://annapolis.craigslist.org/apa/d/welcome...  
-2053  1br   787ft2  https://annapolis.craigslist.org/apa/d/large-u...  
-2054  1br   787ft2  https://annapolis.craigslist.org/apa/d/welcome...  
-2055  1br   780ft2  https://baltimore.craigslist.org/apa/d/spaciou...  
-2056  2br   738ft2  https://baltimore.craigslist.org/apa/d/two-bed...  
-2057  2br  1010ft2  https://baltimore.craigslist.org/apa/d/this-sp...  
+        3        4                                                  5
+0     1br   685ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+1     1br   860ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+2     2br   825ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+3     3br   928ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+4     2br   636ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+5     1br   777ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+6     1br   593ft2  https://washingtondc.craigslist.org/doc/apa/d/...
+7     1br   685ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+8     1br   790ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+9     1br   800ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+10    1br   668ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+11    2br   945ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+12    2br   742ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+13    1br   800ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+14    1br   787ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+15    2br   875ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+16    2br  1000ft2  https://washingtondc.craigslist.org/doc/apa/d/...
+17    1br   800ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+18    3br  1035ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+19    3br  1177ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+20    1br   478ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+21    1br   538ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+22    1br   593ft2  https://washingtondc.craigslist.org/doc/apa/d/...
+23    2br  1110ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+24    1br   860ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+25    2br  1009ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+26    2br   913ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+27    1br   685ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+28    3br  1045ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+29    1br   860ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+...   ...      ...                                                ...
+2028  1br   713ft2  https://baltimore.craigslist.org/apa/d/one-bed...
+2029  1br   700ft2  https://smd.craigslist.org/apa/d/apartment-spe...
+2030  2br  1000ft2  https://annapolis.craigslist.org/apa/d/two-bed...
+2031  2br   950ft2  https://baltimore.craigslist.org/apa/d/reserve...
+2032  1br   850ft2  https://baltimore.craigslist.org/apa/d/reserve...
+2033  3br  1150ft2  https://baltimore.craigslist.org/apa/d/mile-to...
+2034  1br   850ft2  https://baltimore.craigslist.org/apa/d/steps-t...
+2035  2br   950ft2  https://baltimore.craigslist.org/apa/d/newly-r...
+2036  1br   787ft2  https://annapolis.craigslist.org/apa/d/central...
+2037  1br   850ft2  https://baltimore.craigslist.org/apa/d/steps-t...
+2038  3br  1150ft2  https://baltimore.craigslist.org/apa/d/24-hour...
+2039  2br   950ft2  https://baltimore.craigslist.org/apa/d/reserve...
+2040  1br   850ft2  https://baltimore.craigslist.org/apa/d/24-hour...
+2041  1br   787ft2  https://annapolis.craigslist.org/apa/d/falling...
+2042  2br   970ft2  https://baltimore.craigslist.org/apa/d/amazing...
+2043  1br   727ft2  https://baltimore.craigslist.org/apa/d/walk-in...
+2044  1br   780ft2  https://baltimore.craigslist.org/apa/d/receive...
+2045  1br   787ft2  https://annapolis.craigslist.org/apa/d/falling...
+2046  1br   787ft2  https://annapolis.craigslist.org/apa/d/what-ar...
+2047  1br   787ft2  https://annapolis.craigslist.org/apa/d/only-fe...
+2048  2br   967ft2  https://baltimore.craigslist.org/apa/d/two-and...
+2049  1br   787ft2  https://annapolis.craigslist.org/apa/d/what-ar...
+2050  2br   833ft2  https://baltimore.craigslist.org/apa/d/two-bed...
+2051  2br   738ft2  https://baltimore.craigslist.org/apa/d/amazing...
+2052  1br   787ft2  https://annapolis.craigslist.org/apa/d/welcome...
+2053  1br   787ft2  https://annapolis.craigslist.org/apa/d/large-u...
+2054  1br   787ft2  https://annapolis.craigslist.org/apa/d/welcome...
+2055  1br   780ft2  https://baltimore.craigslist.org/apa/d/spaciou...
+2056  2br   738ft2  https://baltimore.craigslist.org/apa/d/two-bed...
+2057  2br  1010ft2  https://baltimore.craigslist.org/apa/d/this-sp...
 
 [2058 rows x 6 columns]
 </pre>
@@ -14167,7 +14187,7 @@ Malika Jackson, Tenant Rep, Fairfax Realty Elite,
     <span class="n">s</span> <span class="o">=</span> <span class="n">soup_test</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;map&quot;</span><span class="p">)</span> <span class="c1"># a) For longitude &amp; longitude</span>
     <span class="n">lat</span><span class="p">,</span> <span class="n">long</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;data-latitude&#39;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;data-longitude&#39;</span><span class="p">)</span> <span class="c1"># b) For number of bathrooms</span>
     <span class="n">s_2</span> <span class="o">=</span> <span class="n">soup_test</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="s1">&#39;shared-line-bubble&#39;</span><span class="p">)</span>
-    <span class="n">baths</span> <span class="o">=</span> <span class="n">s_2</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> 
+    <span class="n">baths</span> <span class="o">=</span> <span class="n">s_2</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">description</span> <span class="o">=</span> <span class="n">soup_test</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;postingbody&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span> <span class="c1"># c) Description</span>
     <span class="k">return</span> <span class="n">baths</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">lat</span><span class="p">),</span><span class="nb">float</span><span class="p">(</span><span class="n">long</span><span class="p">)),</span> <span class="n">description</span>
 
@@ -14221,17 +14241,17 @@ work, we'll need it to take a row as a parameter and return a pandas series.</p>
 <span class="k">def</span> <span class="nf">addtlInfo</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
     <span class="n">r_test</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Link&#39;</span><span class="p">])</span>
     <span class="n">soup_test</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r_test</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">);</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">soup_test</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;map&quot;</span><span class="p">)</span> 
+    <span class="n">s</span> <span class="o">=</span> <span class="n">soup_test</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;map&quot;</span><span class="p">)</span>
     <span class="n">lat</span><span class="p">,</span> <span class="n">long</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;data-latitude&#39;</span><span class="p">),</span> <span class="n">s</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;data-longitude&#39;</span><span class="p">)</span> <span class="c1"># A) For longitude &amp; longitude</span>
     <span class="n">s_2</span> <span class="o">=</span> <span class="n">soup_test</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="s1">&#39;shared-line-bubble&#39;</span><span class="p">)</span> <span class="c1"># B) The first shared-line-bubble tag usually gives br/ba.</span>
     <span class="c1"># BUT, if br/ba isn&#39;t included, then the s_2 will return the next shared-line-bubble: availability date. We don&#39;t care about</span>
     <span class="c1"># this, so we&#39;ll set the number of Baths to nan in that case</span>
     <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;Ba&#39;</span> <span class="ow">in</span> <span class="n">s_2</span><span class="o">.</span><span class="n">text</span><span class="p">):</span>
-        <span class="n">baths</span> <span class="o">=</span> <span class="n">s_2</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> 
-    <span class="k">else</span><span class="p">:</span> 
+        <span class="n">baths</span> <span class="o">=</span> <span class="n">s_2</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
         <span class="n">baths</span> <span class="o">=</span> <span class="s1">&#39;nan&#39;</span>
     <span class="n">description</span> <span class="o">=</span> <span class="n">soup_test</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;postingbody&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span> <span class="c1"># c) Description</span>
-    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="n">baths</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">lat</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">long</span><span class="p">),</span> <span class="n">description</span><span class="p">])</span> 
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="n">baths</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">lat</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">long</span><span class="p">),</span> <span class="n">description</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -15181,7 +15201,7 @@ work, we'll need it to take a row as a parameter and return a pandas series.</p>
 <span class="kn">from</span> <span class="nn">haversine</span> <span class="k">import</span> <span class="n">haversine</span>
 <span class="n">umd</span> <span class="o">=</span> <span class="p">(</span><span class="mf">38.9869</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.9426</span><span class="p">)</span>
 <span class="c1"># CP, Greenbelt, PG Plaza, New Carrollton, Silver Spring, Takoma, Fort Totten Metro locations</span>
-<span class="n">metros</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">38.9780</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.9287</span><span class="p">),</span> <span class="p">(</span><span class="mf">39.0110</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.9111</span><span class="p">),</span> <span class="p">(</span><span class="mf">38.9651</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.9564</span><span class="p">),</span> <span class="p">(</span><span class="mf">38.9478</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.8719</span><span class="p">),</span> 
+<span class="n">metros</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">38.9780</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.9287</span><span class="p">),</span> <span class="p">(</span><span class="mf">39.0110</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.9111</span><span class="p">),</span> <span class="p">(</span><span class="mf">38.9651</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.9564</span><span class="p">),</span> <span class="p">(</span><span class="mf">38.9478</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.8719</span><span class="p">),</span>
          <span class="p">(</span><span class="mf">38.9931</span><span class="p">,</span> <span class="o">-</span><span class="mf">77.0283</span><span class="p">),</span> <span class="p">(</span><span class="mf">38.9755</span><span class="p">,</span> <span class="o">-</span><span class="mf">77.0178</span><span class="p">),</span> <span class="p">(</span><span class="mf">38.9518</span><span class="p">,</span> <span class="o">-</span><span class="mf">77.0022</span><span class="p">)]</span>
 
 <span class="c1"># We&#39;ll define 2 helper functions get compute the new columns</span>
@@ -15227,25 +15247,25 @@ work, we'll need it to take a row as a parameter and return a pandas series.</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>   index         PID                                              Title  \
-0      0  6768139045  Hardwood floors or wall-to-carpet, Onsite mana...   
-1      1  6762443303             WHY WAIT !!!!APPLY FOR FREE TODAY!!!!!   
-2      2  6769618829  Stylish kitchens and baths, Wall-to-wall carpe...   
-3      3  6769498986          Cable Ready, Fitness Programs, Playground   
-4      4  6750320244  Stainless Steel Appliances, Granite-Like Count...   
+0      0  6768139045  Hardwood floors or wall-to-carpet, Onsite mana...
+1      1  6762443303             WHY WAIT !!!!APPLY FOR FREE TODAY!!!!!
+2      2  6769618829  Stylish kitchens and baths, Wall-to-wall carpe...
+3      3  6769498986          Cable Ready, Fitness Programs, Playground
+4      4  6750320244  Stainless Steel Appliances, Granite-Like Count...
 
    Price   BR    Sqft                                               Link  \
-0  $1127  1br  685ft2  https://washingtondc.craigslist.org/mld/apa/d/...   
-1  $1540  1br  860ft2  https://washingtondc.craigslist.org/mld/apa/d/...   
-2  $1745  2br  825ft2  https://washingtondc.craigslist.org/mld/apa/d/...   
-3  $1375  3br  928ft2  https://washingtondc.craigslist.org/mld/apa/d/...   
-4  $1300  2br  636ft2  https://washingtondc.craigslist.org/mld/apa/d/...   
+0  $1127  1br  685ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+1  $1540  1br  860ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+2  $1745  2br  825ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+3  $1375  3br  928ft2  https://washingtondc.craigslist.org/mld/apa/d/...
+4  $1300  2br  636ft2  https://washingtondc.craigslist.org/mld/apa/d/...
 
-     Ba      Lat     Long        UMD-distance      Metro-distance  
-0   1Ba  39.0005 -76.9723  2.9791116222227396  2.5906994732613295  
-1   1Ba  39.0191 -77.0076   6.660888579928414  2.1124338776902576  
-2   2Ba  38.9996 -76.8840   5.257594333633206  1.6545598406404916  
-3   1Ba  38.9832 -77.0007   5.038586158611725  1.0614238160022336  
-4   1Ba  38.9513 -76.8958   5.660390295811271  1.3068111979075652  
+     Ba      Lat     Long        UMD-distance      Metro-distance
+0   1Ba  39.0005 -76.9723  2.9791116222227396  2.5906994732613295
+1   1Ba  39.0191 -77.0076   6.660888579928414  2.1124338776902576
+2   2Ba  38.9996 -76.8840   5.257594333633206  1.6545598406404916
+3   1Ba  38.9832 -77.0007   5.038586158611725  1.0614238160022336
+4   1Ba  38.9513 -76.8958   5.660390295811271  1.3068111979075652
 </pre>
 </div>
 </div>
@@ -15356,10 +15376,10 @@ We have 2038 rows, and each row now has 12 columns of data!</p>
     <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;$&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">))</span>
     <span class="n">row</span><span class="p">[</span><span class="s1">&#39;UMD-distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;UMD-distance&#39;</span><span class="p">]),</span> <span class="mi">2</span><span class="p">)</span>
     <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Metro-distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Metro-distance&#39;</span><span class="p">]),</span> <span class="mi">2</span><span class="p">)</span>
-    
+
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Price&#39;</span><span class="p">],</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;BR&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Ba&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Sqft&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;UMD-distance&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Metro-distance&#39;</span><span class="p">]])</span>
     <span class="c1">#print(row)</span>
-    
+
 <span class="n">dfx</span><span class="p">[[</span><span class="s1">&#39;Price&#39;</span><span class="p">,</span><span class="s1">&#39;BR&#39;</span><span class="p">,</span> <span class="s1">&#39;Ba&#39;</span><span class="p">,</span> <span class="s1">&#39;Sqft&#39;</span><span class="p">,</span> <span class="s1">&#39;UMD-distance&#39;</span><span class="p">,</span> <span class="s1">&#39;Metro-distance&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">dfx</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">cleanRow</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1">#To use seaborn, we&#39;ll need to remove hyphens from our column names:</span>
@@ -15688,7 +15708,7 @@ Min rental price: 460.0
 <span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">777</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">942</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">850</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1110</span><span class="p">]]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">600</span><span class="p">,</span> <span class="mi">1300</span><span class="p">,</span> <span class="mi">1100</span><span class="p">,</span> <span class="mi">1600</span><span class="p">]</span>
 <span class="n">neigh</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> 
+<span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">neigh</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">555</span><span class="p">]]))</span>
 </pre></div>
@@ -15725,7 +15745,7 @@ Min rental price: 460.0
 <span class="n">neigh</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># We&#39;ll use k=4 as our test case!</span>
 <span class="n">X_from_df</span> <span class="o">=</span> <span class="n">dfx2</span><span class="p">[:</span><span class="mi">1000</span><span class="p">]</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;BR&#39;</span><span class="p">,</span><span class="s1">&#39;Ba&#39;</span><span class="p">,</span><span class="s1">&#39;Sqft&#39;</span><span class="p">,</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span><span class="s1">&#39;Long&#39;</span><span class="p">,</span> <span class="s1">&#39;UMDDistance&#39;</span><span class="p">,</span><span class="s1">&#39;MetroDistance&#39;</span><span class="p">])</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">dfx2</span><span class="p">[:</span><span class="mi">1000</span><span class="p">]</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Price&#39;</span><span class="p">])</span>
-<span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_from_df</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> 
+<span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_from_df</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </pre></div>
 
@@ -15850,7 +15870,7 @@ Luc d'Hauthuille</p>
   </div>
 </body>
 
- 
+
 
 
 </html>
